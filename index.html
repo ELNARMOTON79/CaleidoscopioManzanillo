@@ -1,161 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Caleidoscopio Manzanillo</title>
-  <link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colima Quest Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" href="source/log.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="source/icono.ico" type="image/x-icon">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 60vh;
+        }
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        body {
+            padding-top: 64px; /* Ajusta este valor según la altura del encabezado */
+        }
+        .bg-custom {
+            background-color: #617755;
+        }
+        .text-custom {
+            color: #617755;
+        }
+        .bg-custom-hover:hover {
+            background-color: #617755;
+        }
+    </style>
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<header>
-  <div class="header-top">
-    <img class="logo-img" src="logo.png">
-    <nav class="nav">
-      <ul class="nav-list">
-        <h2><li class="tittle-link0">Caleidoscopio Manzanillo</li></h2>
-        <h2><li><a href="#" class="tittle-link">Inicio</a></li></h2>
-        <h2><li><a href="villa.html" class="tittle-link">Villa de Álvarez</a></li></h2>
-        <h2><li><a href="manzanillo.html" class="tittle-link">Manzanillo</a></li></h2>
-      </ul>
-    </nav>
-  </div>
-  <h1>"Explora el mundo, vive tu sueño"</h1>
-</header>
-<div class="page">
-  <main>
-    <div class="articles">
-      <article class="new-article">
-          <img class="article-img" width="368" height="297" src="img2.jpg">
-        <div class="main-article">
-          <ul class="tags">
-            <li class="one-tag"><a class="tag-link">Viajes</a></li>
-          </ul>
-          <h2 class="article-title"><a class="tittle-link">Despierta en el paraíso, cada día es una aventura en la playa.</a></h2>
-          <div class="article-info">
-            <time class="article-data">06/10/2023 </time>
-            <a class="article-author">Gutierrez Rua Gerardo Adonai</a>
-          </div>
-          <div class="article-main-text">
-            <p class="article-text">Sumérgete en un oasis de tranquilidad y belleza natural. Imagina tus huellas sobre la arena suave, el sol bañando tu piel y el sonido relajante de las olas acariciando la orilla.</p>
-          </div>
+<body class="bg-gray-100">
+
+    <!-- Encabezado -->
+    <header class="bg-custom text-white py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="source/log.png" alt="Logo" class="h-12 w-12 mr-2">
+                <h1 class="text-3xl font-bold">Colima Quest Tours</h1>
+            </div>
+            <nav class="hidden md:block">
+                <a href="#" class="mx-2">Inicio</a>
+                <a href="#servicios" class="mx-2">Servicios</a>
+                <a href="contacto.php" class="mx-2">Contacto</a>
+            </nav>
+            <button class="md:hidden text-white" id="menu-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-      </article>
-      <article class="new-article">
-          <img class="article-img" width="368" height="297" src="img3.jpg">
-        <div class="main-article">
-          <ul class="tags">
-            <li class="one-tag"><a class="tag-link">Viajes</a></li>
-          </ul>
-          <h2 class="article-title"><a class="tittle-link">Siente el ritmo del mar y el espectáculo del sol diciendo buenas noches al horizonte.</a></h2>
-          <div class="article-info">
-            <time class="article-data">15/08/2023 </time>
-            <a class="article-author">Vuelvas Perez Rafael Alexandro</a>
-          </div>
-          <div class="article-main-text">
-            <p class="article-text">Mientras el sol se sumerge lentamente en el horizonte, la playa se transforma en un escenario dorado, invitándote a ser parte de este tranquilo espectáculo natural. 🌅</p>
-          </div>
+        <nav class="md:hidden bg-custom hidden" id="menu">
+            <a href="#" class="block px-4 py-2">Inicio</a>
+            <a href="#servicios" class="block px-4 py-2">Servicios</a>
+            <a href="contacto.php" class="block px-4 py-2">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección de Bienvenida -->
+    <section class="bg-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">¡Bienvenidos a Colima Quest Tours!</h2>
+            <p class="text-xl mb-8">Explora el mundo, vive tu sueño</p>
+            <div class="swiper-container rounded-lg shadow-lg overflow-hidden">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="source/fondo1.jpg" alt="Destino 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="source/img5.jpg" alt="Destino 2">
+                    </div>
+                </div>
+            </div>
+            <a href="#servicios" class="bg-custom text-white px-6 py-3 rounded-full mt-8 inline-block bg-custom-hover">Descubre más</a>
         </div>
-      </article>
-      <article class="new-article">
-          <img class="article-img" width="368" height="297" src="img4.jpg">
-        <div class="main-article">
-          <ul class="tags">
-            <li class="one-tag"><a class="tag-link">Viajes
-              </a></li>
-          </ul>
-          <h2 class="article-title"><a class="tittle-link" >Cuando el día se funde en el misterioso abrazo de la noche, cada ola nos susurra historias de incontables horizontes."</a></h2>
-          <div class="article-info">
-            <time class="article-data">22/05/2023 </time>
-            <a  class="article-author">Alexis Emmanuel Chavez Esquivel</a>
-          </div>
-          <div class="article-main-text">
-            <p class="article-text">Mientras el cielo se tiñe de tonos cálidos y el crepúsculo abraza el horizonte, la playa te invita a un momento de calma y belleza pura. 🌅</p><br>
-          </div>
-        </div>
-      </article>
-      <article class="new-article">
-          <img class="article-img" width="368" height="297" src="img6.jpg">
-        <div class="main-article">
-          <ul class="tags">
-            <li class="one-tag"><a class="tag-link">Viajes</a></li>
-          </ul>
-          <h2 class="article-title"><a class="tittle-link">Donde lo Moderno Encuentra lo Mágico</a></h2>
-          <div class="article-info">
-            <time class="article-data"> 01/02/2023 </time>
-            <a href="#" class="article-author">Vuelvas Perez Rafael Alexandro</a>
-          </div>
-          <div class="article-main-text">
-            <p class="article-text">Despierta con los primeros rayos del sol que se filtran a través de tu ventana, regalándote una vista dorada del océano pacífico. A pocos pasos, la suave arena y las palmeras meciéndose al viento te invitan a empezar el día con serenidad.</p>
-          </div>
-        </div>
-      </article>
-      <article class="new-article">
-          <img class="article-img" width="368" height="297" src="img7.jpg">
-        <div class="main-article">
-          <ul class="tags">
-            <li class="one-tag"><a class="tag-link">Viajes</a></li>
-          </ul>
-          <h2 class="article-title">Sumérgete en la Vibra Única de WAYUU Antro-Bar</h2>
-          <div class="article-info">
-            <time class="article-data">28/12/22 </time>
-            <a href="#" class="article-author">William Alberto</a>
-          </div>
-          <div class="article-main-text">
-            <p class="article-text">Descubre el secreto mejor guardado de la noche. WAYUU Antro-Bar te invita a desvelar los misterios de una experiencia nocturna sin igual, donde cada noche es una aventura y cada cóctel cuenta una historia.</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </main>
-  <aside>
-    <section class="new-posts">
-      <h2 class="new-posts-title">Nuevos Posts</h2>
-      <article class="new-article-aside">
-        <div class="article-img-aside">
-          <img class="article-img-aside" src="img2.jpg">
-        </div>
-        <div class="main-article-aside">
-          <time class="article-data-aside">06/10/2023 </time>
-          <h3 class="article-title-aside"><a class="aside-tittle-link">Escapa a la Serenidad del Mar</a></h3>
-        </div>
-      </article>
-      <article class="new-article-aside">
-        <div class="article-img-aside">
-          <img class="article-img-aside" src="img3.jpg">
-        </div>
-        <div class="main-article-aside">
-          <time class="article-data-aside">15/08/2023</time>
-          <h3 class="article-title-aside"><a class="aside-tittle-link">Encuentra tu Atardecer Perfecto</a></h3>
-        </div>
-      </article>
-      <article class="new-article-aside">
-        <div class="article-img-aside">
-          <img class="article-img-aside" src="img4.jpg" alt="Стул на балконе">
-        </div>
-        <div class="main-article-aside">
-          <time class="article-data-aside">22/05/2023</time>
-          <h3 class="article-title-aside"><a class="aside-tittle-link">Sumérgete en la belleza Crepuscular</a></h3>
-        </div>
-      </article>
     </section>
-    
-  </aside>
-</div>
-<footer>
-  <address class="social-media">
-    <ul class="icon-list">
-      <li class="icon-item"><a class="tumblr-icon" href="https://www.tiktok.com/@caleidoscopiomanzanillo"><span class="visually-hidden">Tiktok</span></a></li>
-      <li class="icon-item"><a class="facebook-icon" href="https://www.facebook.com/profile.php?id=61557053853627"><i class="fab fa-facebook-f"></i></a></li>
-      <li class="icon-item"><a class="instagram-icon" href="https://www.instagram.com/caleidoscopiomanzanillooficial/"><i class="fab fa-facebook-f"></i></a></li>
-      <li class="icon-item"><a class="twitter-icon" href="https://twitter.com/caleidoscopiomanzanillo"><i class="fab fa-twitter"></i></a></li>
-    </ul>
-  </address>
-  <div class="copyright">
-    Copyright © 2023-2024 Manzanillo, Colima.
-  </div>x
-</footer>
-<!-- partial -->
-  
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="source/relax.jpg" alt="Relax y Lujo">
+                    <h3 class="text-2xl font-bold mb-4">Relax y Lujo</h3>
+                    <p class="text-gray-700 mb-4">Disfruta de experiencias de relax y lujo en los mejores destinos.</p>
+                    <a href="relax.html" class="text-custom font-bold">Más información</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="source/aventura.jpg" alt="Aventura Marina">
+                    <h3 class="text-2xl font-bold mb-4">Aventura Marina</h3>
+                    <p class="text-gray-700 mb-4">Explora las maravillas del océano con nuestras aventuras marinas.</p>
+                    <a href="aventura.html" class="text-custom font-bold">Más información</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="source/cultura.jpg" alt="Exploración Cultural">
+                    <h3 class="text-2xl font-bold mb-4">Exploración Cultural</h3>
+                    <p class="text-gray-700 mb-4">Sumérgete en la cultura local con nuestros tours culturales.</p>
+                    <a href="cultura.html" class="text-custom font-bold">Más información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="informacion-adicional" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">Información Adicional</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg mx-auto md:col-span-3">
+                    <h3 class="text-2xl font-bold mb-4">Contacto</h3>
+                    <p class="text-gray-700 mb-4">¿Te interesa alguno de los servicio?, no dudes en contactarnos.</p>
+                    <a href="contacto.php" class="text-custom font-bold">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer id="contacto" class="bg-custom text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">© 2024 Colima Quest Tours. Todos los derechos reservados.</p>
+            <div>
+                <a href="#" class="mx-2">Facebook</a>
+                <a href="#" class="mx-2">Twitter</a>
+                <a href="#" class="mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // Menú desplegable para dispositivos móviles
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
